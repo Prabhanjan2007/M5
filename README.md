@@ -9,6 +9,17 @@ Write a C program to convert a 23.65 into 25 using pointer
 4.	Print the modified value.
 
 ## PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    float a;
+    scanf("%f",&a);
+    float* b= &a;
+    printf("the integer equivalent of %.2f =%d",*b,(int)*b);
+    return 0;
+}
+```
 
 ## OUTPUT:
  	
@@ -33,18 +44,34 @@ Thus the program to convert a 23.65 into 25 using pointer has been executed succ
 
 ## AIM:
 
-Write a C program to calculate the Product of first 12 natural numbers using Recursion
+write a program to print odd/even numbers in range from 100 to 121 based on lower limit value/starting value using recursion.
 
 ## ALGORITHM:
 
-1.	Define a recursive function calculateProduct that takes an integer parameter n.
-2.	Return n multiplied by the result of the calculateProduct function called with n - 1.
-3.	Declare an integer variable n and an unsigned long long variable product.
-4.	Initialize n with the value 12 (for the first 12 natural numbers).
-5.	Call the calculateProduct function with n and store the result in the product variable.
-6.	Print the result, indicating it is the product of the first 12 natural numbers.
+1.  get two input  from the user and pass it to the function.
+2.  In the function if a>b print a and call the fucntion again increaseing the first argument by 2.
+3. End program. 
 
 ## PROGRAM:
+```
+#include<stdio.h>
+void eve(int a,int b);
+void eve(int a,int b)
+{
+    if(a<b)
+    {
+        printf("%d ",a);
+        eve(a+2,b);
+    }
+}
+int main()
+{
+    int a=100,b=121;
+    printf("Even/odd Numbers from %d to %d are: ",a,b);
+    eve(a,b);
+    return 0;
+}
+```
 ## OUTPUT:
          		
 ## RESULT:
@@ -68,8 +95,34 @@ Write C Program to find Sum of each row of a Matrix
 4.	Print the sum for each row.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int arr[a][b];
+    for(int i=0;i<a;i++)
+    {
+        for(int j=0;j<b;j++)
+        {
+            scanf("%d ",&arr[i][j]);
+        }
+    }
+    for(int i=0;i<a;i++)
+    {
+        int count=0;
+        for(int j=0;j<b;j++)
+        {
+            count+=arr[i][j];
+        }
+        printf("The Sum of Elements of a Rows in a Matrix:  %d\n",count);
+    }
+    return 0;
+}
 
+```
 
 ## OUTPUT
 
@@ -78,14 +131,23 @@ Write C Program to find Sum of each row of a Matrix
  
 
  ## RESULT
- 
+ Thus program executed successfully.
 
 
 # EX-24-STRINGS
 
 ## AIM:
 
-Write C program for the below pyramid string pattern. Enter a string: PROGRAM Enter number of rows: 5 P R O G R A M P R O G R A M P R O G R A M
+Write C program for the below pyramid string pattern. Enter a string: COMPUTER 
+C
+CO
+COM
+COMP
+COMPU
+COMPUT
+COMPUTE
+COMPUTER
+
 
 ## ALGORITHM:
 
@@ -96,8 +158,25 @@ Write C program for the below pyramid string pattern. Enter a string: PROGRAM En
 5.	End the program.
 
 ## PROGRAM:
-
-
+```
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[300];
+    scanf("%[^\n]",str);
+    int v=strlen(str);
+    for(int i=0;i<v;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            printf("%c",str[j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
  ## OUTPUT
 
  
@@ -115,30 +194,58 @@ Thus the C program to String process executed successfully
 # EX -25 –DISPLAYING ARRAYS USING POINTERS
 ## AIM
 
-Write a c program to read and display an array of any 6 integer elements using pointer
+Write a C program to enter elements in two matrices[2x2] and check whether both matrices are equal or not.
 
 ## ALGORITHM
-Step 1: Start the program.
-Step 2: Declare the following:
-•	Integer variable i for iteration.
-•	Integer variable n to store the number of elements.
-•	Integer array arr[10] to hold up to 10 elements.
-•	Integer pointer parr and initialize it to point to the array arr.
-Step 3: Read the value of n (number of elements) from the user.
-Step 4: Loop from i = 0 to i < n:
-•	Read an integer value and store it in the address parr + i using pointer arithmetic.
-Step 5: Loop from i = 0 to i < n:
-•	Print the element at *(parr + i) using pointer dereferencing.
-Step 6: End the program.
+1.  Start program.
+2.  Using for loop get the elements for both arrays..
+3.  Use another for loop to check the equality of corresponding element.
+4.  If everything is true print equal else not equal.
+5.  Stop Program
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main()
+{
+    int a[2][2],b[2][2];
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            scanf("%d ",&a[i][j]);
+        }
+    }
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            scanf("%d ",&b[i][j]);
+        }
+    }
+    int C=0;
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            if(a[i][j]==b[i][j])
+            C++;
+        }
+    }
+    if(C==4)
+    printf("Matrix A is equal to Matrix B (A==B)");
+    else
+    printf("Matrix A is not equal to Matrix B (A!=B)");
+    return 0;
+}
+
+```
 ## OUTPUT
 
  
 
 ## RESULT
 
-Thus the C program to read and display an array of any 6 integer elements using pointer has been executed
-
+Thus the C program to enter elements in two matrices[2x2] and check whether both matrices are equal or not.
 
