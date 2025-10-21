@@ -23,7 +23,7 @@ int main()
 
 ## OUTPUT:
  	
-
+![alt text](m51.png)
 
 
 
@@ -73,7 +73,9 @@ int main()
 }
 ```
 ## OUTPUT:
-         		
+![alt text](m52.png)
+
+
 ## RESULT:
 
 Thus the program has been executed successfully.
@@ -126,7 +128,7 @@ int main()
 
 ## OUTPUT
 
-
+![alt text](m53.png)
  
  
 
@@ -178,7 +180,7 @@ int main()
 }
 ```
  ## OUTPUT
-
+![alt text](m54.png)
  
 
 ## RESULT
@@ -243,7 +245,7 @@ int main()
 ```
 ## OUTPUT
 
- 
+ ![alt text](m55.png)
 
 ## RESULT
 
